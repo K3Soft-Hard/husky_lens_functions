@@ -9,8 +9,8 @@ namespace K3huskyLens {
      */
     export function idCoordinates(id: number = 1, dx: number = 150, dy: number = 30) {
         huskylens.request()
-        if (huskylens.isAppear(1, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
-            huskylens.writeOSD("X:" + huskylens.readeBox(1, Content1.xCenter) + ", Y:" + huskylens.readeBox(1, Content1.yCenter), 150, 30)
+        if (huskylens.isAppear(id, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+            huskylens.writeOSD("X:" + huskylens.readeBox(id, Content1.xCenter) + ", Y:" + huskylens.readeBox(id, Content1.yCenter), dx, dy)
         } else {
             huskylens.clearOSD()
         }
