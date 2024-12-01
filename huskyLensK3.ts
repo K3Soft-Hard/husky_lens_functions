@@ -4,6 +4,9 @@ namespace K3huskyLens {
     //%blockId="k3hl_show_coordinates"
     //%block="show coordinates id: %id x:%dx y:%dy"
     //%group=functions
+    /**
+     * Show object coordinates on screen, default x = 150, y =30
+     */
     export function idCoordinates(id: number = 1, dx: number = 150, dy: number = 30) {
         huskylens.request()
         if (huskylens.isAppear(1, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
