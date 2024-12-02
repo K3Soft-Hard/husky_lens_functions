@@ -1,7 +1,7 @@
 //% weight=100 color=#0fbc11 icon=""
 namespace K3huskyLens {
 
-    let coordinates
+    let coordinates: string
 
     //%blockId="k3hl_show_coordinates"
     //%block="show coordinates id: %id x:%dx y:%dy"
