@@ -29,7 +29,7 @@ namespace K3huskyLens {
         if (huskylens.isAppear(id, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
             coordinates = ("X:" + huskylens.readeBox(id, Content1.xCenter) + ", Y:" + huskylens.readeBox(id, Content1.yCenter))
         } else {
-            coordinates = 0
+            coordinates = ""
         }
         return (coordinates)
     }
