@@ -2,10 +2,12 @@
 namespace K3huskyLens {
 
     let coordinates: string
+    let x: number
+    let y: number
 
     //%blockId="k3hl_show_coordinates"
     //%block="show coordinates id: %id x:%dx y:%dy"
-    //%group=functions
+    //%group=coordinates
     //%advanced=true
     /**
      * Show object coordinates on screen, default x = 150, y =30
@@ -20,7 +22,7 @@ namespace K3huskyLens {
     }
     //%blockId="k3hl_get_coordinates"
     //%block="get coordinates id: %id"
-    //%group=functions
+    //%group=coordinates
     /**
      * Return object coordinates
      */
@@ -32,5 +34,35 @@ namespace K3huskyLens {
             coordinates = ""
         }
         return (coordinates)
+        }
+        //%blockId="k3hl_x_coordinates"
+        //%block="get X id: %id"
+        //%group=coordinates
+        /**
+         * Return object x
+         */
+        export function xCoordinates(id: number = 1) {
+        huskylens.request()
+        if (huskylens.isAppear(id, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+            x = (huskylens.readeBox(id, Content1.xCenter))
+        } else {
+            x = 0
+        }
+        return (x)
+    }
+            //%blockId="k3hl_y_coordinates"
+        //%block="get Y id: %id"
+        //%group=coordinates
+        /**
+         * Return object y
+         */
+        export function yCoordinates(id: number = 1) {
+        huskylens.request()
+        if (huskylens.isAppear(id, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+            y = (huskylens.readeBox(id, Content1.xCenter))
+        } else {
+            y = 0
+        }
+        return (y)
     }
 }
