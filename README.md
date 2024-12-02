@@ -1,6 +1,22 @@
 
 > Open this page at [https://k3soft-hard.github.io/husky_lens_functions/](https://k3soft-hard.github.io/husky_lens_functions/)
 
+## Introduction
+
+This extension adds features for beginners to control the husky lens camera
+
+## Usage Example
+
+* Show coordinates on husky lens display
+```blocks
+basic.forever(function () {
+    K3LedControl.fillScreen(K3LedControl.ScreenMode.chessboard)
+    basic.pause(200)
+    K3LedControl.fillScreen(K3LedControl.ScreenMode.invertedChessboard)
+    basic.pause(200)
+})
+```
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
