@@ -27,7 +27,7 @@ namespace K3huskyLens {
     export function getCoordinates(id: number = 1) {
         huskylens.request()
         if (huskylens.isAppear(id, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
-            coordinates = ("X:" + huskylens.readeBox(id, Content1.xCenter) + ", Y:" + huskylens.readeBox(id, Content1.yCenter))
+            coordinates = (huskylens.readeBox(id, Content1.xCenter) + ", " + huskylens.readeBox(id, Content1.yCenter))
         } else {
             coordinates = ""
         }
