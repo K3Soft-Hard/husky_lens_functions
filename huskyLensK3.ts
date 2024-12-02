@@ -7,7 +7,7 @@ namespace K3huskyLens {
 
     //%blockId="k3hl_show_coordinates"
     //%block="show coordinates id: %id x:%dx y:%dy"
-    //%group=coordinates
+    //%group=functions
     //%advanced=true
     /**
      * Show object coordinates on screen, default x = 150, y =30
@@ -24,7 +24,7 @@ namespace K3huskyLens {
     //%block="get coordinates id: %id"
     //%group=coordinates
     /**
-     * Return object coordinates
+     * Return object coordinates (string)
      */
     export function getCoordinates(id: number = 1) {
         huskylens.request()
@@ -39,7 +39,7 @@ namespace K3huskyLens {
         //%block="get X id: %id"
         //%group=coordinates
         /**
-         * Return object x
+         * Return object x (number)
          */
         export function xCoordinates(id: number = 1) {
         huskylens.request()
@@ -54,7 +54,7 @@ namespace K3huskyLens {
         //%block="get Y id: %id"
         //%group=coordinates
         /**
-         * Return object y
+         * Return object y (number)
          */
         export function yCoordinates(id: number = 1) {
         huskylens.request()
