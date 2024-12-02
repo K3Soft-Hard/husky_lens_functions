@@ -1,6 +1,8 @@
 //% weight=100 color=#0fbc11 icon=""
 namespace K3huskyLens {
 
+    let coordinates
+
     //%blockId="k3hl_show_coordinates"
     //%block="show coordinates id: %id x:%dx y:%dy"
     //%group=functions
@@ -22,12 +24,13 @@ namespace K3huskyLens {
     /**
      * Return object coordinates
      */
-    export function getCoordinates(id: number = 1, dx: number = 150, dy: number = 30) {
+    export function getCoordinates(id: number = 1) {
         huskylens.request()
         if (huskylens.isAppear(id, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
-            return ("X:" + huskylens.readeBox(id, Content1.xCenter) + ", Y:" + huskylens.readeBox(id, Content1.yCenter),)
+            coordinates = ("X:" + huskylens.readeBox(id, Content1.xCenter) + ", Y:" + huskylens.readeBox(id, Content1.yCenter))
         } else {
-            return ()
+            coordinates = 0
         }
+        return (coordinates)
     }
 }
