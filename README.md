@@ -9,11 +9,9 @@ This extension adds features for beginners to control the husky lens camera
 
 * Show coordinates on husky lens display
 ```blocks
+huskylens.initI2c()
 basic.forever(function () {
-    K3LedControl.fillScreen(K3LedControl.ScreenMode.chessboard)
-    basic.pause(200)
-    K3LedControl.fillScreen(K3LedControl.ScreenMode.invertedChessboard)
-    basic.pause(200)
+    K3huskyLens.showCoordinates(1, 100, 30)
 })
 ```
 
